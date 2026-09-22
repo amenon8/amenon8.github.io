@@ -1,3 +1,12 @@
+/* ===== Pastel pink and blue theme colours ===== */
+:root {
+  --pink-light: #F8C8DC;
+  --blue-light: #CDE7F7;
+  --pink-dark: #B83B6E;
+  --blue-dark: #2F5D8A;
+  --text-dark: #2B2D42;
+}
+
 .profile-pic {
   position: relative;
   max-width:130px;
@@ -5,13 +14,9 @@
   width: auto;
   height: auto;
   overflow: hidden;
-  /* display: inline-block; */
-  
-  
-  /* background-size: cover;  */
   margin: -31px; 
   margin-left:-7px;
-  border: 6px solid rgba(0, 77, 64, 0.4); 
+  border: 6px solid rgba(184, 59, 110, 0.4); 
   border-radius: 50% !important;
 }
 
@@ -21,9 +26,7 @@
 }
 
 .tracker {
-  /* visibility: hidden; */
   position: fixed;
-  /* margin-inline-end: auto;  */
   bottom: 0; 
   right: 0;
 }
@@ -33,7 +36,6 @@
   margin: 0 auto;
   width: auto;
   text-align: inherit;
-  /* padding: 10px; */
 }
 
 .icon-btn {
@@ -85,7 +87,7 @@
   position: relative;
   padding: 11px 35px;
   background: #fff;
-  color: #00796b;
+  color: var(--blue-dark);
   border: 2px solid #fff;
   font-weight: 600;
   font-size: 15px;
@@ -95,17 +97,12 @@
   -webkit-border-radius: 5px;
 }
 
-/* .readme:hover{
-  color: white;
-  background-color: #00796b;
-} */
-
 .contactme {
   position: relative;
   padding: 11px 35px;
   background: none;
-  color: #fff;
-  border: 2px solid #fff;
+  color: var(--text-dark);
+  border: 2px solid var(--text-dark);
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 1px;
@@ -116,43 +113,20 @@
 }
 
 .contactme:hover{
-  color: #00796b;
+  color: var(--blue-dark);
   background-color: white;
 }
-/* main body */
 
-/* body-color */
+/* main body */
 
 body {
   color: #333;
   font-size: 18px;
 }
 
-/* body {
-  color: black;
-  font-size: 18px;
-} */
-
-/* main a -- links */
-
-/* a {
-  color: #009688;
-} */
-
 a {
-  color: #004d40;
+  color: var(--blue-dark);
 }
-
-/* main blockqoute */
-
-/* blockquote {
-  border-left: 5px solid #795548;
-  color: #795548;
-  font-size: 125%;
-  font-weight: 400;
-  margin: 20px 0;
-  padding-left: 1.5rem;
-} */
 
 blockquote {
   border-left: 5px solid #795548;
@@ -180,12 +154,6 @@ nav {
   height: 0;
 }
 
-/* nav {
-  background: rgb(149, 126, 212);
-  box-shadow: none;
-  height: 0;
-} */
-
 nav i {
   padding: 0 15px;
   position: relative;
@@ -193,11 +161,6 @@ nav i {
 }
 
 /* main */
-
-/* main {
-  background: url(../../assets/img/bg.png) repeat;
-  padding-left: 190px;
-} */
 
 main {
   background: url(../../assets/img/bg.png) repeat;
@@ -227,17 +190,9 @@ ul.side-nav li {
   padding: 0;
 }
 
-/* ul.side-nav.fixed a {
-  box-sizing: content-box;
-  color: rgb(48, 122, 207);
-  display: block;
-  line-height: 100%;
-  padding: 10px 0 12px;
-} */
-
 ul.side-nav.fixed a {
   box-sizing: content-box;
-  color: rgb(16, 202, 56);
+  color: var(--pink-dark);
   display: block;
   line-height: 100%;
   padding: 10px 0 12px;
@@ -247,14 +202,6 @@ ul.table-of-contents li.logo a.active, ul.table-of-contents li.logo a:hover {
   border: none;
   font-weight: 200;
 }
-
-/* ul.side-nav.fixed li.logo {
-  background-color: #fafafa;
-  border-bottom: 1px solid #ddd;
-  box-sizing: content-box;
-  min-height: 90px;
-  padding: 30px 30px 40px;
-} */
 
 ul.side-nav.fixed li.logo {
   background-color: #fafafa;
@@ -312,39 +259,24 @@ h3 {
   height: 100vh;
 }
 
-/* Original */
-
-/* #intro.section {
-  background: url(../../assets/img/white-ai-wallpaper.jpg) no-repeat top center/cover;
-  position: relative;
-} */
-
+/* Intro section: diagonal pink to blue gradient */
 #intro.section {
-  background: #a7ffeb repeat;
+  background: linear-gradient(135deg, var(--pink-light), var(--blue-light));
   position: relative;
 }
 
 #intro.section .container {
-  color: white;
+  color: var(--text-dark);
   font-weight: 200;
   left: 0;
   position: absolute;
   top: 0;
 }
 
-/* #intro.section .container *:not(span) {
-  font-weight: 300;
-  line-height: 150%;
-  padding: 0 30px;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-} */
-
 #intro.section .container *:not(span) {
   font-weight: 300;
-  /* font-weight: 400; */
   line-height: 150%;
-  /* padding: 0 0px; */
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: none;
 }
 
 #intro.section .underline {
@@ -355,8 +287,9 @@ h3 {
   padding: 0 10px;
 }
 
+/* Overlay no longer needed: it darkened the old background for white text */
 .overlay {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: transparent;
   height: 100%;
   left: 0;
   position: absolute;
@@ -365,8 +298,6 @@ h3 {
 }
 
 .waves-effect.waves-blue .waves-ripple {
-  /* The alpha value allows the text and background color
-   of the button to still show through. */
   background-color: rgba(33, 150, 243, 0.2);
 }
 
@@ -384,7 +315,7 @@ h3 {
 .card li a {
   margin-right: 0;
   color: #333;
-  border-bottom: 2px solid #ffab40;
+  border-bottom: 2px solid var(--pink-light);
 }
 
 .card li a:hover {
@@ -466,14 +397,8 @@ a.hoverline {
   -webkit-transition: 0.25s all;
 }
 
-/* main a.hoverline */
-
-/* a.hoverline:hover {
-  border-bottom: 3px solid #24305e !important;
-} */
-
 a.hoverline:hover {
-  border-bottom: 3px solid #004d40 !important;
+  border-bottom: 3px solid var(--pink-dark) !important;
 }
 
 #skills .card.large {
@@ -546,25 +471,36 @@ small {
   color: #666 !important;
 }
 
-/* main .teal-text */
+/* Theme colour classes (override Materialize) */
 
 .teal-text {
-  color: #008073 !important;
+  color: var(--blue-dark) !important;
 }
-
-/* .teal-text {
-  color: #0b5e86 !important;
-} */
-
-/* .teal */
 
 .teal {
-  background-color: #008073 !important;
+  background-color: var(--pink-light) !important;
 }
 
-/* .teal {
-  background-color: #00695c !important;
-} */
+/* Section header bars: dark text so it stays readable on pastel pink */
+.page-title.teal {
+  color: var(--text-dark) !important;
+}
+
+/* Name highlight in the intro: deep pink so it stands out on the gradient */
+.caption .teal {
+  background-color: var(--pink-dark) !important;
+  color: #fff !important;
+}
+
+/* Floating buttons in Contact and project cards */
+.blue-grey {
+  background-color: var(--blue-dark) !important;
+}
+
+/* Job titles and skill headings */
+.brown-text {
+  color: var(--pink-dark) !important;
+}
 
 @media (min-width: 1200px) {
   #experience .container {
@@ -602,7 +538,7 @@ small {
     position: absolute;
   }
   nav a.button-collapse, nav a.button-collapse i {
-    color: #009688;
+    color: var(--blue-dark);
     height: 56px;
     line-height: 56px;
   }
