@@ -1,0 +1,145 @@
+/* ===== Activity 6: Dark mode ===== */
+/* Every rule starts with body.dark-mode, so none of this applies
+   until JavaScript adds the "dark-mode" class to <body>. */
+
+/* Toggle button (visible in both modes) */
+.theme-toggle {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--pink-light);
+  color: var(--text-dark);
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Visible outline when reached with the Tab key */
+.theme-toggle:focus {
+  outline: 3px solid var(--blue-dark);
+  outline-offset: 3px;
+}
+
+/* Smooth fade between modes */
+body,
+main,
+.card,
+nav {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* ----- Dark mode colours ----- */
+
+/* Lighter accent shades so links and titles stay readable on dark backgrounds */
+body.dark-mode {
+  --pink-dark: #F4A6C6;
+  --blue-dark: #9CC9EE;
+  background-color: #1E1E2E;
+  color: #E6E6F0;
+}
+
+body.dark-mode main {
+  background: #1E1E2E;
+}
+
+/* Cards */
+body.dark-mode .card,
+body.dark-mode .card-reveal {
+  background-color: #2A2A3C;
+  color: #E6E6F0;
+}
+
+body.dark-mode #experience .card-action {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+body.dark-mode .card-action span,
+body.dark-mode .grey-text {
+  color: #B8B8CC !important;
+}
+
+body.dark-mode #skills h4,
+body.dark-mode #experience .card-content .row {
+  border-bottom-color: #44445A;
+}
+
+/* Some logos (GitHub, Go) are black, so give them a light tile */
+body.dark-mode #skills .col img.responsive-img {
+  background-color: #F3F3F8;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+/* Navigation (desktop sidebar and mobile menu) */
+body.dark-mode nav,
+body.dark-mode ul.side-nav,
+body.dark-mode ul.side-nav.fixed li.logo {
+  background-color: #2A2A3C;
+  border-bottom-color: #44445A;
+}
+
+body.dark-mode ul.side-nav.fixed.table-of-contents li:not(.logo) a span,
+body.dark-mode ul#slide-out li:not(.logo) a span,
+body.dark-mode .black-text {
+  color: #E6E6F0 !important;
+}
+
+body.dark-mode ul.table-of-contents li:not(.logo) a.active,
+body.dark-mode ul.table-of-contents li:not(.logo) a:hover {
+  background-color: #34344A;
+}
+
+/* Intro section */
+body.dark-mode #intro.section {
+  background: linear-gradient(135deg, #4A2E3E, #23344A);
+}
+
+body.dark-mode #intro.section .container {
+  color: #E6E6F0;
+}
+
+/* These two have inline style colours in index.html.
+   !important in a stylesheet beats a normal inline style. */
+body.dark-mode #intro h5 {
+  color: #E6E6F0 !important;
+}
+
+body.dark-mode .typing {
+  color: #9CC9EE !important;
+}
+
+/* Name highlight: keep the deep pink so white text stays readable */
+body.dark-mode .caption .teal {
+  background-color: #B83B6E !important;
+}
+
+/* Intro buttons */
+body.dark-mode .readme {
+  color: #2F5D8A;
+}
+
+body.dark-mode .contactme {
+  color: #E6E6F0;
+  border-color: #E6E6F0;
+}
+
+/* Floating buttons and Load More: a mid blue so white icons stay readable */
+body.dark-mode .blue-grey {
+  background-color: #3E6FA0 !important;
+}
+
+/* Toggle button in dark mode */
+body.dark-mode .theme-toggle {
+  background-color: #3E6FA0;
+  color: #FFFFFF;
+}
