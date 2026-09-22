@@ -256,64 +256,12 @@
     
 
     <!-- Fourth Section: Projects -->
-    <section id="projects" class="section scrollspy">
+        <section id="projects" class="section scrollspy">
       <h3 class="page-title white-text teal">Projects</h3>
       <div class="container">
-        <div class="row">
-
-                    <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Speak&Sync screenshot" src="/assets/img/speaksync.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Speak&amp;Sync<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>An AI tool that summarizes real-time customer service conversations. Built at New Hacks 2024.</p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> Python, spaCy, React, JavaScript, HTML</li>
-                  <li>Built the frontend in React to display live conversation summaries.</li>
-                  <li>Used spaCy NLP to generate concise, actionable summaries, speeding up information retrieval for support agents.</li>
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit the GitHub repo for Speak&Sync" href="https://github.com/amenon8/newHacks2024"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-                   <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Student spaces redesign" src="/assets/img/study-spaces.jpg" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Tech-Friendly Student Spaces<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>A redesign of three university study rooms to better support students working with technology.</p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> CAD, Spatial Design</li>
-                  <li>Led the redesign of three study rooms, translating real-world spatial constraints into structured design requirements and layouts.</li>
-                  <li>Modeled and iterated room layouts with a focus on precision, scale, and usability.</li>
-                  <li>January 2024 - April 2024 | Academic Design Project, Toronto, ON</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-
-          <!-- ************* -->
+        <div class="row" id="projects-container"></div>
+        <div class="center-align">
+          <button id="load-more-btn" class="btn waves-effect waves-light blue-grey">Load More</button>
         </div>
       </div>
     </section>
@@ -460,6 +408,7 @@
       })
     })
   </script>
+    <script src="/assets/js/projects.js"></script>
 </body>
 
 </html>
